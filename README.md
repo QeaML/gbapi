@@ -11,8 +11,25 @@ GB, [click here](https://gamebanana.com/members/1479808) to go to my profile, an
 * Python 3.6+
 * `aiohttp`
 
-## Usage
-After you've installed the library:
+## Getting started
+First, install the library with `pip`:
+
+```
+pip install gbapi==0.1.0b
+```
+
+Then, simply import it and use the `Client` to communicate with GameBanana!
+
+```py
+import gbapi
+gb = gbapi.Client()
+await gb.get_map(123)
+await gb.get_skin(456)
+await gb.(...)
+```
+
+Here's a basic example:
+
 ```py
 import asyncio
 import gbapi
