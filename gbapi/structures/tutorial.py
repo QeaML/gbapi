@@ -1,10 +1,9 @@
 from datetime import datetime
-from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+from gbapi.api.base_submission import BaseSubmission
 
-class Tutorial(StructuredData):
+class Tutorial(BaseSubmission):
 	def __init__(self, stats, sdata, ainfo):
-		super(Tutorial, self).__init__(sdata)
+		super(Tutorial, self).__init__(stats, sdata)
 		
 		"""
 		{
@@ -18,5 +17,3 @@ class Tutorial(StructuredData):
 		
 		self.info = ainfo['_aCellValues']
 		self.difficulty = self.info['_sDifficultyLevel']
-		
-		self.stats = Stats(stats)

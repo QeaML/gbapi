@@ -1,3 +1,5 @@
+"""module containong StructuredData class"""
+
 from .author import Author
 from .game import Game
 
@@ -30,13 +32,17 @@ from .game import Game
 """
 
 class StructuredData:
+	"""
+		Internal basic StructuredData class.
+		The BaseSubmission class inherits from this.
+	"""
 	def __init__(self, src):
 		if not isinstance(src, dict):
 			raise TypeError(
 				f"from StructuredData: "
 				f"src must be `dict`, not {type(raw)}!"
 			)
-		self.src = src
+		#self.src = src
 		
 		self.author = Author(src['author'])
 		self.partOf = self.game = Game(src['isPartOf'])

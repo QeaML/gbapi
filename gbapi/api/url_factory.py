@@ -1,6 +1,12 @@
+"""module containing URLFactory class"""
+
 __all__ = ['URLFactory']
 
 class URLFactory:
+	"""
+		Internal URLFactory.
+		Used by Client to create URLs.
+	"""
 	def __init__(self, base_url):
 		if not isinstance(base_url, str):
 			raise TypeError(

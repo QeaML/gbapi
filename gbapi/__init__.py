@@ -10,8 +10,7 @@ Usage:
 """
 
 __author__ = "qeaml <qeaml@wp.pl>"
-__version__ = "0.1.0"
-version_info = (0, 1, 0, "beta", 1)
+__version__ = "0.2.0"
 
 from .client import gbApi as Client
 

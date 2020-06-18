@@ -1,7 +1,10 @@
-from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+"""module containing Blog class"""
 
-class Blog(StructuredData):
-	def __init__(self, stats, sdata):
-		super(Blog, self).__init__(sdata)
-		self.stats = Stats(stats)
+from gbapi.api.base_submission import BaseSubmission
+
+class Blog(BaseSubmission):
+	"""
+		Represents a blog on GameBanana.
+		Since blogs don't have any additional info, this is just a renamed BaseSubmission.
+	"""
+	pass

@@ -1,3 +1,5 @@
+"""module containing Stats class"""
+
 from datetime import datetime
 
 """
@@ -15,17 +17,21 @@ from datetime import datetime
 """
 
 class Stats:
+	"""
+		Internal Stats class.
+		Represents stats of a submission on GameBanana.
+	"""
 	def __init__(self, src):
 		if not isinstance(src, dict):
 			raise TypeError(
 				f"from Stats: "
 				f"src must be `dict`, not {type(raw)}!"
 			)
-		self.src = src['_aCellValues']
+		src = src['_aCellValues']
+			
+		self.likes = src.get('_nLikesCount', None)
+		self.views = src['_nViewCount']
+		self.posts = src['_nPostCount']
 		
-		self.likes = self.src['_nLikesCount']
-		self.views = self.src['_nViewCount']
-		self.posts = self.src['_nPostCount']
-		
-		self.added = datetime.utcfromtimestamp(self.src['_tsDateAdded'])
-		self.modified = datetime.utcfromtimestamp(self.src['_tsDateModified'])
+		self.added = datetime.utcfromtimestamp(src['_tsDateAdded'])
+		self.modified = datetime.utcfromtimestamp(src['_tsDateModified'])

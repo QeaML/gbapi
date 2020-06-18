@@ -1,3 +1,5 @@
+"""module containing Game class"""
+
 """
 (from structured_data.py)
 	"isPartOf": {
@@ -11,6 +13,10 @@
 """
 
 class Game:
+	"""
+		Internal Game class.
+		Represents a game on GameBanana.
+	"""
 	def __init__(self, src):
 		if not isinstance(src, dict):
 			raise TypeError(

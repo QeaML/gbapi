@@ -1,7 +1,4 @@
-from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+from gbapi.api.base_submission import BaseSubmission
 
-class Effect(StructuredData):
-	def __init__(self, stats, sdata):
-		super(Effect, self).__init__(sdata)
-		self.stats = Stats(stats)
+class Effect(BaseSubmission):
+	pass

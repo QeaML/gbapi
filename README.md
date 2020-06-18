@@ -15,7 +15,7 @@ GB, [click here](https://gamebanana.com/members/1479808) to go to my profile, an
 First, install the library with `pip`:
 
 ```
-pip install gbapi==0.1.0b
+pip install gbapi
 ```
 
 Then, simply import it and use the `Client` to communicate with GameBanana!

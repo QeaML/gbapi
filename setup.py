@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="gbapi", # Replace with your own username
-    version="0.1.0b",
+    name="gbapi",
+    version="0.2.0",
     author="qeaml",
     author_email="qeaml@wp.pl",
     description="qeaml's wrapper for GameBanana's API",

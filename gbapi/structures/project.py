@@ -1,9 +1,8 @@
-from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+from gbapi.api.base_submission import BaseSubmission
 
-class Project(StructuredData):
+class Project(BaseSubmission):
 	def __init__(self, stats, sdata, ainfo):
-		super(Project, self).__init__(sdata)
+		super(Project, self).__init__(stats, sdata)
 		
 		"""
 		{
@@ -25,5 +24,3 @@ class Project(StructuredData):
 		self.finished_url = self.info['_sFinishedProjectSubmissionUrl']
 		self.wip_count = self.info['_sWipCount']
 		self.file_count = self.info['_sFileCount']
-		
-		self.stats = Stats(stats)

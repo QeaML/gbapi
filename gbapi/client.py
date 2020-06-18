@@ -51,7 +51,7 @@ class gbApi:
 		attrb = await self._get(attrb_url)
 		stats = await self._get(stats_url)
 		
-		return obj(stats, sdata, attrb)
+		return obj(sdata, stats, attrb)
 		
 	async def _init_ssatai(self, url, obj):
 		sdata_url = self._url.make(url, "StructuredDataModule")
@@ -86,10 +86,10 @@ class gbApi:
 		return await self._init_simple(f"blogs/{id}", Blog)
 
 	async def get_castaway(self, id):
-		return await self._init_ssat(f"castaways/{id}", Castaway)
+		return await self._init_simple(f"castaways/{id}", Castaway)
 	
 	async def get_concept(self, id):
-		return await self._init_ssat(f"concepts/{id}", Concept)
+		return await self._init_simple(f"concepts/{id}", Concept)
 	
 	async def get_effect(self, id):
 		return await self._init_simple(f"effects/{id}", Effect)
@@ -98,7 +98,7 @@ class gbApi:
 		return await self._init_simple(f"gamefiles/{id}", Gamefile)
 
 	async def get_gui(self, id):
-		return await self._init_ssat(f"guis/{id}", GUI)
+		return await self._init_simple(f"guis/{id}", GUI)
 	
 	async def get_map(self, id):
 		return await self._init_ssai(f"maps/{id}", Map)
@@ -116,25 +116,25 @@ class gbApi:
 		return await self._init_ssai(f"requests/{id}", Request)
 	
 	async def get_script(self, id):
-		return await self._init_simple(f"scripts/{id}", Scripts)
+		return await self._init_simple(f"scripts/{id}", Script)
 	
 	async def get_skin(self, id):
-		return await self._init_ssat(f"skins/{id}", Skin)
+		return await self._init_simple(f"skins/{id}", Skin)
 	
 	async def get_sound(self, id):
-		return await self._init_ssat(f"sounds/{id}", Sound)
+		return await self._init_simple(f"sounds/{id}", Sound)
 	
 	async def get_spray(self, id):
 		return await self._init_simple(f"sprays/{id}", Spray)
 	
 	async def get_texture(self, id):
-		return await self._init_ssat(f"texturess/{id}", Texture)
+		return await self._init_simple(f"textures/{id}", Texture)
 	
 	async def get_thread(self, id):
 		return await self._init_simple(f"threads/{id}", Thread)
 	
 	async def get_tool(self, id):
-		return await self._init_ssatai(f"tools/{id}", Tool)
+		return await self._init_ssai(f"tools/{id}", Tool)
 	
 	async def get_tutorial(self, id):
 		return await self._init_ssai(f"tuts/{id}", Tutorial)
@@ -143,7 +143,7 @@ class gbApi:
 		return await self._init_ssai(f"wares/{id}", Ware)
 	
 	async def get_wip(self, id):
-		return await self._init_ssatai(f"wips/{id}", WiP)
+		return await self._init_ssai(f"wips/{id}", WiP)
 
 	async def close(self):
 		await self._session.close()

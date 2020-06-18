@@ -1,9 +1,8 @@
-from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+from gbapi.api.base_submission import BaseSubmission
 
-class Map(StructuredData):
+class Map(BaseSubmission):
 	def __init__(self, stats, sdata, ainfo):
-		super(Map, self).__init__(sdata)
+		super(Map, self).__init__(stats, sdata)
 		
 		"""
 		{
@@ -17,4 +16,3 @@ class Map(StructuredData):
 		
 		self.info = ainfo['_aCellValues']
 		self.version = self.info['_sVersion']
-		self.stats = Stats(stats)

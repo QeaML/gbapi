@@ -1,11 +1,9 @@
 from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+from gbapi.api.base_submission import BaseSubmission
 
-class Ware(StructuredData):
+class Ware(BaseSubmission):
 	def __init__(self, stats, sdata, ainfo):
-		super(Tool, self).__init__(sdata)
+		super(Ware, self).__init__(stats, sdata)
 		
 		self.info = ainfo['_aCellValues']
 		self.ware_type = self.info['_sType']
-		
-		self.stats = Stats(stats)

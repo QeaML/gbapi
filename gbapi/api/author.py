@@ -1,3 +1,5 @@
+"""module containing Author class"""
+
 """
 (from structured_data.py)
 	"author": {
@@ -8,6 +10,10 @@
 """
 
 class Author:
+	"""
+		Internal Author class.
+		Represents a GameBanana user.
+	"""
 	def __init__(self, src):
 		if not isinstance(src, dict):
 			raise TypeError(

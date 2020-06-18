@@ -1,10 +1,9 @@
 from datetime import datetime
-from gbapi.api.stats import Stats
-from gbapi.api.structured_data import StructuredData
+from gbapi.api.base_submission import BaseSubmission
 
-class Request(StructuredData):
+class Request(BaseSubmission):
 	def __init__(self, stats, sdata, ainfo):
-		super(Request, self).__init__(sdata)
+		super(Request, self).__init__(stats, sdata)
 		
 		"""
 		{
@@ -24,5 +23,3 @@ class Request(StructuredData):
 		self.deadline = datetime.utcfromtimestamp(self.info['_tsDeadline'])
 		self.resolution = self.info['_sResolution']
 		self.resolutionMessage = self.info['_sResolutionMessage']
-		
-		self.stats = Stats(stats)
