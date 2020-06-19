@@ -11,37 +11,5 @@ GB, [click here](https://gamebanana.com/members/1479808) to go to my profile, an
 * Python 3.6+
 * `aiohttp`
 
-## Getting started
-First, install the library with `pip`:
-
-```
-pip install gbapi
-```
-
-Then, simply import it and use the `Client` to communicate with GameBanana!
-
-```py
-import gbapi
-gb = gbapi.Client()
-await gb.get_map(123)
-await gb.get_skin(456)
-await gb.(...)
-```
-
-Here's a basic example:
-
-```py
-import asyncio
-import gbapi
-
-async def main():
-	gb = gbapi.Client()
-	m = await gb.get_map(12345)
-	print(m.game.name)      #prints the name of the game the map is for
-	print(m.author.name)    #prints the name of the submitter
-	await gb.close()        #remember to always close() your client !
-	
-if __name__ == '__main__':
-	loop = asyncio.get_event_loop()
-	loop.run_until_complete(main())
-```
+## Documentation
+The documentation can be found [here](https://qeaml.github.io/gbapi).
