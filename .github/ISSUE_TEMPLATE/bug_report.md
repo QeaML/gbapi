@@ -7,11 +7,13 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-What's wrong?
+**Replace anything that has ~~strikethrough~~ with your own text!**
 
-**To Reproduce**
-What should you do to get the bug?
+## Describe the bug
+~~What's wrong?~~
 
-**Expected behavior**
-What should've happened if there was no bug?
+## Steps to reproduce
+~~What should you do to get the bug?~~
+
+## Expected behavior
+~~What should've happened if there was no bug?~~
