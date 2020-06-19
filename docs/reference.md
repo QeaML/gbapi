@@ -2,6 +2,9 @@
 *[< Index](index.md)*
 
 # Table of Contents
+*Note:* If clicking on these doesn't work, try using your browser's find 
+feature. (usually `Ctrl-F` on Windows)
+
 1. [`Client`](reference.md#class-Client)
 2. [Base structures](reference.md#BASE-STRUCTURES)
 3. [Submission classes](reference.md#SUBMISSION-CLASSES)
